@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejecución Presupuestal UCSM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav class="navbar" style="background-color: #05be6a;">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </div>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+        <img src="logotransparente.png" width="200">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Ejecución presupuestal</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="card">
+      <div class="card-content">
+          <span class="title-left">Menú de opciones</span>
+          <span class="title-right">Paredes Marchena Fernando German</span>
+      </div>
+    </div>
+    <div class="container">
+      <form method="POST" action="procesar.php">
+        <div class="form-group">
+            <label for="select">Seleccione una opción:</label>
+            <select class="form-control" id="select" name="opcion" required>
+                <option value="">Seleccionar</option>
+                <option value="opcion1">Ingenierias</option>
+                <option value="opcion2">Salud</option>
+                <option value="opcion3">Sociales</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="archivo">Seleccione un archivo:</label>
+            <input type="file" class="form-control-file" id="archivo" name="archivo" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
